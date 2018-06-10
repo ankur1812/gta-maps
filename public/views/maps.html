@@ -1,0 +1,50 @@
+<div ng-controller="mapsCtrl">
+	<div class="row">
+		<div class="col-lg-8">
+			<h2>Hogwarts</h2>
+			<img src="images/hogwarts.jpg" width="570" height="380" class="map" usemap="#hogwarts">
+			<map name="hogwarts">
+		        <area ng-repeat="area in mapAreas"
+		        id="{{area.id}}" 
+		        ng-attr-title="{{area.name}}" 
+		        ng-click="showAreaDetails(area)"
+		        shape="{{area.shape}}" 
+		        coords="{{area.coords}}" />
+			</map>
+
+			</p>
+			<small>Currently showing : Map of Hogwarts Ground</small><br/>
+			<a href="./">View All Maps</a>
+		</div>
+		<div class="col-lg-4" ng-if="selectedAreaId">
+			<div class="p-xs b-lightgrey">	
+				<h3><u>{{selectedArea.name}}</u></h3>
+				<div class="">
+					<b>Thumbnails</b><br>
+					<!-- <img ng-src=" {{selectedArea.imgList[0]}}" height="32px" width="32px"> -->
+					<div class="gallery">
+  						<a target="_blank" href="{{selectedArea.imgList[0]}}">
+    						<img ng-src="{{selectedArea.imgList[0]}}" alt="Mountains" width="30" height="30">
+  						</a>
+					</div>
+											<b>Story:</b><br>
+
+				<div class='scrollable'>
+					<p>
+						{{selectedArea.desc}}
+					</p>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>	
+
+<style>
+.p-xs{ padding:5px; }
+.b-lightgrey {border: 1px solid lightgrey;}
+.scrollable{
+	height: 320px;
+	overflow-y: scroll;
+}
+</style>
