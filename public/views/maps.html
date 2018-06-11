@@ -1,9 +1,10 @@
 <div ng-controller="mapsCtrl">
 	<div class="row">
 		<div class="col-lg-8">
-			<h2>Hogwarts</h2>
-			<img src="{{imgSrc}}" width="570" height="380" class="map" usemap="#hogwarts">
-			<map name="hogwarts">
+			<!-- <h2>Hogwarts</h2> -->
+			<!-- <img src="{{imgSrc}}" width="570" height="380" class="map" usemap="#hogwarts"> -->
+			<img id="myImg" src="{{imgSrc}}" class="map" ng-style="imgCenter" usemap="#mapAreas">
+			<map name="mapAreas">
 		        <area ng-repeat="area in mapAreas"
 		        id="{{area.id}}" 
 		        ng-attr-title="{{area.name}}" 

@@ -24,9 +24,14 @@ app.controller('mapsCtrl', function($scope, $location, $timeout, MapServices) {
 
 
     if($scope.map === 'hogwarts')
-        $scope.imgSrc = 'images/hogwarts.jpg';
+        $scope.imgSrc = 'images/maps/hogwarts.jpg';
+    else if($scope.map === 'vice-city')
+        $scope.imgSrc = 'images/maps/vice-city.jpg';
+    else if($scope.map === 'san-andreas')
+        $scope.imgSrc = 'images/maps/san-andreas.jpg';
     else 
-        $scope.imgSrc = '';
+        $scope.imgSrc = 'images/maps/hogwarts.jpg';
+
 
     if($scope.id){
         var selectedArea=null;
