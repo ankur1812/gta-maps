@@ -1,4 +1,4 @@
-var app = angular.module('myApp', ["ngRoute","ui.bootstrap"]);
+var app = angular.module('gtaMaps', ["ngRoute","ui.bootstrap"]);
 app.config(function($routeProvider) {
   $routeProvider
   .when("/", {
