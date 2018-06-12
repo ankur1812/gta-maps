@@ -5,7 +5,7 @@ app.controller('mapsCtrl', function($scope, $location, $timeout, MapServices) {
     $scope.selectedAreaId = null;
 
 
-    $scope.mapAreas = MapServices.getMapAreas();
+    $scope.mapAreas = MapServices.getMapAreas($scope.map);
 
     $scope.showAreaDetails = function(area){
         $scope.selectedArea = area;

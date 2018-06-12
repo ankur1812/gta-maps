@@ -24,9 +24,11 @@
 					<b>Thumbnails</b><br>
 					<!-- <img ng-src=" {{selectedArea.imgList[0]}}" height="32px" width="32px"> -->
 					<div class="gallery">
-  						<a target="_blank" href="{{selectedArea.imgList[0]}}">
-    						<img ng-src="{{selectedArea.imgList[0]}}" alt="Mountains" width="30" height="30">
-  						</a>
+						<span data-ng-repeat="areaImg in selectedArea.imgList">
+	  						<a target="_blank" href="{{areaImg}}">
+	    						<img ng-src="{{areaImg}}" alt="Mountains" width="30" height="30">
+	  						</a>
+	  					</span>
 					</div>
 											<b>Story:</b><br>
 
