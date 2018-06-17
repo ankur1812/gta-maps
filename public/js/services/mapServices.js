@@ -246,8 +246,10 @@ app.service('MapServices', function() {
 		    	return hogwartsAreas;
 		    else if(map==='vice-city')
 		    	return viceCityAreas;
+		    else if(map==='san-andreas')
+		    	return viceCityAreas;
 		    else
-		    	return sanAndreasAreas;
+		    	return hogwartsAreas;
 
 	    }
 
